@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>assignment_group</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>GlideAjax for Help Desk </name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+ var ga=new GlideAjax("servicehelputil");
+ ga.addParam("sysparm_name","checkHelpDesk");
+
+
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:32:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f4d2afd983b29e50545bc530ceaad37b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideAjax for Help Desk </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_1583821_itm">59b4c45f836ed250545bc530ceaad3b8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</sys_scope>
+        <sys_update_name>sys_script_client_f4d2afd983b29e50545bc530ceaad37b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:32:06</sys_updated_on>
+        <table>x_1583821_itm_asset_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</application>
+        <file_path/>
+        <instance_id>6094f0afdb713590b1eb9027c5961905</instance_id>
+        <instance_name>dev187590</instance_name>
+        <name>sys_script_client_f4d2afd983b29e50545bc530ceaad37b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;assignment_group&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;GlideAjax for Help Desk &lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+ var ga=new GlideAjax("servicehelputil");
+ ga.addParam("sysparm_name","checkHelpDesk");
+
+
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-30 07:32:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f4d2afd983b29e50545bc530ceaad37b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;GlideAjax for Help Desk &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="IT Asset Management" source="x_1583821_itm"&gt;59b4c45f836ed250545bc530ceaad3b8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="IT Asset Management"&gt;59b4c45f836ed250545bc530ceaad3b8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_f4d2afd983b29e50545bc530ceaad37b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-30 07:32:06&lt;/sys_updated_on&gt;&lt;table&gt;x_1583821_itm_asset_request&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>386857834</payload_hash>
+        <record_name>GlideAjax for Help Desk </record_name>
+        <reverted_from/>
+        <source>a93508df836ed250545bc530ceaad3e7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:32:06</sys_created_on>
+        <sys_id>ecc6abd983f29e50545bc530ceaad384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194167aae8c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:32:06</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>e0c6abd938f29e507bd51fe5cfdee384</update_guid>
+        <update_guid_history>e0c6abd938f29e507bd51fe5cfdee384:386857834</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:36:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>35e61b98a18340b09695f1129813aec1</sys_id>
+        <sys_metadata>f4d2afd983b29e50545bc530ceaad37b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GlideAjax for Help Desk </sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583821_itm">59b4c45f836ed250545bc530ceaad3b8</sys_package>
+        <sys_parent display_value="Asset Request">953a4c9383aed250545bc530ceaad364</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</sys_scope>
+        <sys_scope_delete display_value="">933d1f761ad34d0f8de9474d49a58d09</sys_scope_delete>
+        <sys_update_name>sys_script_client_f4d2afd983b29e50545bc530ceaad37b</sys_update_name>
+        <sys_update_version display_value="sys_script_client_f4d2afd983b29e50545bc530ceaad37b">ecc6abd983f29e50545bc530ceaad384</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:36:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

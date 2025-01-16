@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1583821_itm.setShortDescPriority</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>setShortDescPriority</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var setShortDescPriority = Class.create();
+setShortDescPriority.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	priorityChanged:function(){
+		var priVal=this.getParameter("priority");
+
+		if(priVal=="1"){
+			return "1";
+		}
+		else if(priVal=="2"){
+			return "2";
+		}
+		else if(priVal=="3"){
+			return "3";
+
+		}
+		
+	},
+
+    type: 'setShortDescPriority'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 11:10:59</sys_created_on>
+        <sys_id>9908d46583f69e50545bc530ceaad3f7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>setShortDescPriority</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583821_itm">59b4c45f836ed250545bc530ceaad3b8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</sys_scope>
+        <sys_update_name>sys_script_include_9908d46583f69e50545bc530ceaad3f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 17:59:53</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9908d46583f69e50545bc530ceaad3f7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 11:10:59</sys_created_on>
+        <sys_id>32d8582983f69e50545bc530ceaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 11:10:59</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

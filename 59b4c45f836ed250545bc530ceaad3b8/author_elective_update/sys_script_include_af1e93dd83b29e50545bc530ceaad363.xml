@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1583821_itm.servicehelputil</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>servicehelputil</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var servicehelputil = Class.create();
+servicehelputil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	checkHelpDesk:function(){
+		
+	},
+    type: 'servicehelputil'
+
+
+
+	
+
+
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:23:28</sys_created_on>
+        <sys_id>af1e93dd83b29e50545bc530ceaad363</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>servicehelputil</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583821_itm">59b4c45f836ed250545bc530ceaad3b8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</sys_scope>
+        <sys_update_name>sys_script_include_af1e93dd83b29e50545bc530ceaad363</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:26:06</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>af1e93dd83b29e50545bc530ceaad363</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:23:28</sys_created_on>
+        <sys_id>4ac4631d83b29e50545bc530ceaad362</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:23:28</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</application>
+        <file_path/>
+        <instance_id>6094f0afdb713590b1eb9027c5961905</instance_id>
+        <instance_name>dev187590</instance_name>
+        <name>sys_script_include_af1e93dd83b29e50545bc530ceaad363</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1583821_itm.servicehelputil&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;servicehelputil&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var servicehelputil = Class.create();
+servicehelputil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	checkHelpDesk:function(){
+		
+	},
+    type: 'servicehelputil'
+
+
+
+	
+
+
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-30 07:23:28&lt;/sys_created_on&gt;&lt;sys_id&gt;af1e93dd83b29e50545bc530ceaad363&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;servicehelputil&lt;/sys_name&gt;&lt;sys_package display_value="IT Asset Management" source="x_1583821_itm"&gt;59b4c45f836ed250545bc530ceaad3b8&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="IT Asset Management"&gt;59b4c45f836ed250545bc530ceaad3b8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_af1e93dd83b29e50545bc530ceaad363&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-30 07:26:06&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;af1e93dd83b29e50545bc530ceaad363&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-30 07:23:28&lt;/sys_created_on&gt;&lt;sys_id&gt;4ac4631d83b29e50545bc530ceaad362&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-30 07:23:28&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-860018777</payload_hash>
+        <record_name>servicehelputil</record_name>
+        <reverted_from/>
+        <source>a93508df836ed250545bc530ceaad3e7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:26:06</sys_created_on>
+        <sys_id>b465239983f29e50545bc530ceaad35e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194167532500000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:26:06</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>7c6523996df29e508a2235aa61c1df5d</update_guid>
+        <update_guid_history>7c6523996df29e508a2235aa61c1df5d:-860018777,26c4675982f29e5064cc81ea3c21d101:1287553556</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:33:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>6b3fdb22c13442d395c0c6108dd0e181</sys_id>
+        <sys_metadata>af1e93dd83b29e50545bc530ceaad363</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>servicehelputil</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583821_itm">59b4c45f836ed250545bc530ceaad3b8</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</sys_scope>
+        <sys_scope_delete display_value="">933d1f761ad34d0f8de9474d49a58d09</sys_scope_delete>
+        <sys_update_name>sys_script_include_af1e93dd83b29e50545bc530ceaad363</sys_update_name>
+        <sys_update_version display_value="sys_script_include_af1e93dd83b29e50545bc530ceaad363">b465239983f29e50545bc530ceaad35e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:33:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

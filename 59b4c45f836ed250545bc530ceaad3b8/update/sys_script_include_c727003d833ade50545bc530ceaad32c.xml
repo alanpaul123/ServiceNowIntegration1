@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1583821_itm.createRecordForTable</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>createRecordForTable</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var createRecordForTable = Class.create();
+createRecordForTable.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+createRecords:function(){
+	var currentId=this.getParameter("currentRecord");
+	var current=new GlideRecord("x_1583821_itm_asset_request");
+	current.addQuery("sys_id",currentId);
+	current.query();
+	if(current.next()){
+	var assetName=current.u_choice_t_asset.getDisplayValue();
+    var cmdbTable="";
+	var db = new GlideRecord("sys_db_object");
+	db.addQuery("label",assetName);
+	db.addQuery("name","STARTSWITH","cmdb_ci_");
+	db.setLimit(1);
+	db.query();
+	if(db.next()){
+		cmdbTable = db.name;
+	}
+	var grCmdb = new GlideRecord(cmdbTable);
+	grCmdb.initialize();
+
+	grCmdb.department=current.u_reference_1.department;
+	grCmdb.manufacturer=current.u_reference_1.company;
+	grCmdb.assigned_to=current.u_reference_1;
+
+	var parentID=grCmdb.insert();
+	current.asset=parentID;
+
+// //////////////////////////////////////////////////////////
+
+	var grAlm=new GlideRecord("alm_hardware");
+	grAlm.initialize();
+	grAlm.department=current.u_reference_1.department;
+	grAlm.manufacturer=current.u_reference_1.company;
+	grAlm.assigned_to=current.u_reference_1;
+	grAlm.ci=parentID;
+	grAlm.install_status="2";
+	var hardware=grAlm.insert();
+
+//// ///////////////////////////////////////////////////////////
+
+var grModel=new GlideRecord("cmdb_model");
+grModel.initialize();
+grModel.cmdb_model_category="218323293743100044e0bfc8bcbe5d61";
+grModel.manufacturer=current.u_reference_1.company;
+grModel.name=current.u_choice_consu.getDisplayValue();
+var sysIDModel=grModel.insert();
+
+// ///////////////////////////////////////////////////////////////////////
+
+var grConsumable=new GlideRecord("alm_consumable");
+grConsumable.initialize();
+grConsumable.model=sysIDModel;
+grConsumable.model_category="218323293743100044e0bfc8bcbe5d61";
+grConsumable.location=current.u_reference_1.location;
+grConsumable.parent=hardware;
+grConsumable.install_status="2";
+grConsumable.insert();
+current.update();
+return true;	
+	}
+
+	},
+    type: 'createRecordForTable',
+
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 04:42:28</sys_created_on>
+        <sys_id>c727003d833ade50545bc530ceaad32c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>createRecordForTable</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583821_itm">59b4c45f836ed250545bc530ceaad3b8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IT Asset Management">59b4c45f836ed250545bc530ceaad3b8</sys_scope>
+        <sys_update_name>sys_script_include_c727003d833ade50545bc530ceaad32c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-01 06:10:04</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>c727003d833ade50545bc530ceaad32c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-31 04:42:28</sys_created_on>
+        <sys_id>d989047d833ade50545bc530ceaad325</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-31 04:42:28</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

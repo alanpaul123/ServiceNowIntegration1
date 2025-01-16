@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="953a4c9383aed250545bc530ceaad364" label="Asset Request" max_length="40" name="x_1583821_itm_asset_request" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_journal_wkn" type="journal_input"/>
+        <element label="Assigned To" max_length="40" name="assigned_to" reference="sys_user" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="u_string_descript" type="string"/>
+        <element attributes="encode_utf8=false" label="Requestor" max_length="32" name="u_reference_1" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type of Asset" max_length="40" name="u_choice_t_asset" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Computer" sequence="0" value="computer"/>
+                <element inactive_on_update="false" label="Network Gear" sequence="1" value="network gear"/>
+                <element inactive_on_update="false" label="Printer" sequence="2" value="printer"/>
+                <element inactive_on_update="false" label="UPS" sequence="3" value="ups"/>
+            </choice>
+        </element>
+        <element label="Asset" max_length="32" name="asset" reference="cmdb_ci" type="reference"/>
+        <element label="Opened by" max_length="32" name="opened_by" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="4000" name="u_journal_comment" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="u_choice_t_asset" dependent_on_field="u_choice_t_asset" label="Consumables" max_length="40" name="u_choice_consu" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="printer" inactive_on_update="false" label="Hp" sequence="6" value="hp"/>
+                <element dependent_value="ups" inactive_on_update="false" label="ABB" sequence="10" value="abb"/>
+                <element dependent_value="computer" inactive_on_update="false" label="Keyboard" sequence="0" value="keyboard"/>
+                <element dependent_value="computer" inactive_on_update="false" label="Mouse" sequence="1" value="mouse"/>
+                <element dependent_value="ups" inactive_on_update="false" label="Mitsubishi" sequence="14" value="mitsubishi"/>
+                <element dependent_value="printer" inactive_on_update="false" label="Canon" sequence="7" value="canon"/>
+                <element dependent_value="ups" inactive_on_update="false" label="Schneider Electric" sequence="11" value="schneider electric"/>
+                <element dependent_value="computer" inactive_on_update="false" label="Speakers" sequence="2" value="speakers"/>
+                <element dependent_value="ups" inactive_on_update="false" label="Eaton" sequence="12" value="eaton"/>
+                <element dependent_value="network gear" inactive_on_update="false" label="Network Switch" sequence="3" value="network switch"/>
+                <element dependent_value="printer" inactive_on_update="false" label="Epson" sequence="8" value="epson"/>
+                <element dependent_value="network gear" inactive_on_update="false" label="Router" sequence="4" value="router"/>
+                <element dependent_value="network gear" inactive_on_update="false" label="Modem" sequence="5" value="modem"/>
+                <element dependent_value="printer" inactive_on_update="false" label="Xerox" sequence="9" value="xerox"/>
+                <element dependent_value="ups" inactive_on_update="false" label="Vertiv Group Corp" sequence="13" value="vertiv group corp"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Priority" max_length="40" name="u_choice_prio" type="string">
+            <choice>
+                <element inactive_on_update="false" label="3" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="1" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="2" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="Assignment Group" max_length="32" name="assignment_group" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_choice_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Submitted" sequence="0" value="submitted"/>
+                <element inactive_on_update="false" label="In Progress" sequence="1" value="inprogress"/>
+                <element inactive_on_update="false" label="Dispatched" sequence="2" value="dispatched"/>
+                <element inactive_on_update="false" label="Delivered" sequence="3" value="delivered"/>
+                <element inactive_on_update="false" label="Closed" sequence="4" value="closed"/>
+                <element inactive_on_update="false" label="Closed Incomplete" sequence="5" value="closedIncomplete"/>
+            </choice>
+        </element>
+        <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="40" name="u_string_shd" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Closed compelete" sequence="0" value="closedcomp"/>
+                <element inactive_on_update="false" label="Closed and Incomeplete" sequence="0" value="closedIncomp"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="asset"/>
+        </index>
+        <index name="index2">
+            <element name="assignment_group"/>
+        </index>
+        <index name="index3">
+            <element name="company"/>
+        </index>
+        <index name="index4">
+            <element name="opened_by"/>
+        </index>
+        <index name="index5">
+            <element name="u_reference_1"/>
+        </index>
+    </element>
+</database>
